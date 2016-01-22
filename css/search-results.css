@@ -1,0 +1,82 @@
+﻿.atdw-wls-page .results-per-page {
+    float: right;
+}
+.atdw-wls-page .results-per-page span {
+    float: left;
+    font-weight: bold;
+    line-height: 22px;
+    vert-align: middle;
+}
+.atdw-wls-page .results-per-page .result-per-page 
+{
+    float: left;
+    overflow: hidden;   
+}
+.atdw-wls-page .results-per-page .result-per-page li
+{
+    list-style: none;
+    display: inline;
+    float: left;
+    padding: 3px;
+    margin-left: 10px;
+}
+.atdw-wls-page .results-per-page .results-displaying
+{
+    clear:both;
+}
+.atdw-wls-page .search-results li
+{
+    position: relative;
+    list-style: none;
+    background-color: #dde3e7;
+    padding: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.atdw-wls-page .search-results li a.product-image {
+    float: left;
+    margin-right: 15px;
+}
+.atdw-wls-page .search-results li .details 
+{
+    float: left;  
+    color: #636363;
+    max-width: 70%; 
+}
+.atdw-wls-page .search-results li .details .date 
+{
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.atdw-wls-page .search-results li .details .address, .atdw-wls-page .search-results li .details .description
+{
+    margin: 5px 0px;
+}
+.atdw-wls-page .search-results li .icons 
+{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;    
+}
+.atdw-wls-page .no-results
+{
+    font-weight:bold;
+    font-size: 16px;
+}
+.atdw-wls-page li label 
+{
+    margin-left: 5px;
+}
+.atdw-wls-page .paging li
+{
+    list-style: none;
+    display: inline;
+    float: left;
+    padding: 3px;
+    margin-right: 5px;
+}
+.atdw-wls-page .pageNumber, .atdw-wls-page .resultCount
+{
+    cursor:pointer;
+    text-transform:uppercase;
+}

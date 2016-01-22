@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Event Details </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
+    <script src="whitelabel.js" type="text/javascript"></script>
+    <!-- TODO; load this dynamically via the load script -->
+    <script src="http://maps.googleapis.com/maps/api/js?v=3.6&sensor=false" type="text/javascript"></script>
+</head>
+<body>
+    <div class="atdw-wls-page">
+        <div class="page event-page">
+            <div class="page-container">
+                <div class="header">
+                    <h1>
+                        myEvents White Label</h1>
+                </div>
+                <div class="search">
+                    <div class="search-bar">
+                        <div class="search-box">
+                            <input type="text" name="searchText" id="atdwSearchText" onkeydown="if (event.keyCode == 13) document.getElementById('atdwSearchButton').click();" />
+                            <a href="" class="btn" title="Search" id="atdwSearchButton" onclick="atdw.myevents.event.searchEvents(); return false;">
+                                Search</a>
+                        </div>
+                    </div>
+                    <div class="filters">
+                        <div class="col col-left">
+                            <a href="search.htm" title="Back to search results"><< Back to search results</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="col col-left"></div>
+                    <div class="primary-content atdw-event-details">
+                    </div>
+                </div>
+                <div class="footer">
+                    [FOOTER]
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

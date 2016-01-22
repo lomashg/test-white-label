@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Event Search</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
+    <script src="whitelabel.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="atdw-wls-page">
+        <div class="page-container">
+            <div class="header">
+                <h1>
+                    myEvents White Label</h1>
+            </div>
+            <div class="search">
+                <div class="search-bar">
+                    <div class="search-box">
+                        <input type="text" name="searchText" id="atdwSearchText" onkeydown="if (event.keyCode == 13) document.getElementById('atdwSearchButton').click();" />
+                        <a href="" class="btn" id="atdwSearchButton" title="Search" onclick="atdw.myevents.search.getEvents(true); return false;">
+                            Search
+                        </a>
+                    </div>
+                </div>
+                <div class="filters">
+                    <div class="col col-left">
+                        <h3>
+                            Results Filtered By</h3>
+                    </div>
+                    <div>
+                        <ul id="atdwResultsFilteredBy">
+                            <!-- EXAMPLE OUTPUT:
+                                <li class="resultFilter">All</li>
+                                <li class="resultFilter">Category</li>
+                                <li class="resultFilter">Location</li>
+                                <li class="resultFilter">Free Entry</li>
+                                <li class="resultFilter">Tags</li>
+                                -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="filters col col-left">
+                    <h3>
+                        FILTERS</h3>
+                    <div class="filter-group calendar">
+                        <div class="atdw-multidatepicker">
+                            <span class="displayDates"></span>
+                        </div>
+                        <input id="atdwEventDates" type="hidden" />
+                        <h4>
+                            Date Range</h4>
+                        <ul class="select-list date-ranges" id="atdwSearchDateRanges">
+                            <li selected="selected">All
+                                <input type="hidden" value="All" />
+                            </li>
+                            <li>Today
+                                <input type="hidden" value="Today" />
+                            </li>
+                            <li>This Weekend
+                                <input type="hidden" value="This Weekend" />
+                            </li>
+                            <li>This Week
+                                <input type="hidden" value="This Week" />
+                            </li>
+                            <li>Next Week
+                                <input type="hidden" value="Next Week" />
+                            </li>
+                            <li>This Month
+                                <input type="hidden" value="This Month" />
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div class="filter-group tags leisure">
+                        <h4>Leisure Categories</h4>
+                        <ul class="list-unstyled" id="atdwLeisureTags"></ul>
+                    </div> -->
+
+                    <div class="filter-group tags business">
+                        <h4>Business Categories</h4>
+                        <ul class="list-unstyled" id="atdwBusinessTypes"></ul>
+                    </div>
+                    <div class="filter-group location">
+                        <h4>
+                            Location</h4>
+                        <ul class="atdwAutocompleteList" id="atdwAutocompleteList">
+                        </ul>
+                    </div>
+                    <div class="filter-group type">
+                        <ul class="types">
+                            <li>
+                                <input type="checkbox" class="atdw-freeentry" name="FREEENTRY" id="atdwFreeEntry" />
+                                <label for="atdwFreeEntry">
+                                    Free entry</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter-group buttons"></div>
+                </div>
+                <div class="primary-content">
+                    <div class="results-per-page">
+                        <span class="uppercase">Events Per Page</span>
+                        <ul class="select-list result-per-page">
+                            <li class="resultCount">10</li>
+                            <li class="resultCount">25</li>
+                            <li class="resultCount">50</li>
+                        </ul>
+                        <div class="results-displaying">
+                            <!-- EXAMPLE OUTPUT: Displaying 10 of 22 results -->
+                        </div>
+                    </div>
+                    <div class="date-title">
+                        <h2 class="date-range-displaying">
+                            <!-- EXAMPLE OUTPUT: This Week -->
+                        </h2>
+                        <p class="dates-displaying">
+                            <!-- EXAMPLE OUTPUT:  Monday April 2nd, 2012 to Friday April 6th, 2012 -->
+                        </p>
+                    </div>
+                    <div id="atdwSearchResultsOutput">
+                        <!-- EXAMPLE OUTPUT:
+                            <ul class="search-results">
+                                <li>
+                                    <img src="test" alt="Test Image" class="product" />
+                                    <div class="details">
+                                        <h3>
+                                            Australian Open - The Grand Slam of Asia / Pacific
+                                        </h3>
+                                        <div class="date">
+                                            Monday April 2nd, 2012
+                                        </div>
+                                        <div class="address">
+                                            <div class="venue-name">Melbourne Park</div>
+                                            <div class="street-address">Batman Ave</div>
+                                            <div class="city">Melbourne, Victoria 3000</div>
+                                        </div>
+                                        <div class="icons">
+                                            <img src="test" alt="leisure"/>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            -->
+                    </div>
+                    <div id="atdwPaging">
+                        <!-- EXAMPLE OUTPUT:
+                            <ol class="paging">
+                                <li class="pageNumber">Prev</li>
+                                <li class="pageNumber">1</li>
+                                <li class="pageNumber">2</li>
+                                <li class="pageNumber">3</li>
+                                <li class="pageNumber">Next</li>
+                            </ol>-->
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <!-- footer goes here. FOR EXAMPLE: (use ul class="nav" to get a nice navbar style display) -->
+                <!-- <ul class="nav">
+                         <li><a href="http://www.destinationnsw.com" target="_blank" title="destinationnsw.com"><span>destinationnsw.com</span></a></li>
+                         <li><a href="http://www.tourism.nsw.gov.au" target="_blank" title="Tourism NSW Corportate Website"><span>Tourism NSW Corportate Website</span></a></li>
+                         <li><a href="http://www.destinationnsw.com.au/disclaimer" target="_blank" title="Disclaimer"><span>Disclaimer</span></a></li>
+                         <li><a href="http://www.destinationnsw.com.au/privacy-policy" target="_blank" title="Privacy Policy"><span>Privacy Policy</span></a></li>
+                     </ul> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

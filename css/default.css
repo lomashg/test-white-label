@@ -1,0 +1,497 @@
+﻿@import "search-results.css";
+@import "event-details.css";
+
+.atdw-wls-page * { margin: 0; padding: 0; border: 0px none; }
+
+.atdw-wls-page
+{
+    text-align: center;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size:.80em;
+    padding: 0;
+    color: #777777;
+    background-color: #ededed;
+}
+.atdw-wls-page a:link, a:visited
+{
+    color: #636363;
+    text-decoration: none;
+}
+.atdw-wls-page a:hover, a:active
+{
+    color: #636363;
+    text-decoration: underline;
+}
+.atdw-wls-page p
+{
+    margin-bottom: 1em;
+    line-height: 1.6em;
+}
+.atdw-wls-page img
+{
+    border: none;
+    display:block;
+}
+.atdw-wls-page input[type=submit]
+{
+    cursor: pointer;
+}
+.atdw-wls-page input[type=text] 
+{
+    color: inherit;
+    border-top: 2px solid #a0a0a0;
+    border-left: 2px solid #c3c3c3;
+    border-bottom: 2px solid #eeeeee;
+    border-right: 2px solid #c3c3c3;
+    padding: 2px;
+}
+/* HEADINGS   
+----------------------------------------------------------*/
+.atdw-wls-page h1, h2, h3, h4, h5, h6
+{
+    color: #636363;
+    font-weight: bold;
+    margin: 0.3em 0em 0.3em 0em;
+}
+.atdw-wls-page h1
+{
+    font-weight: 700;
+    font-size: 2em;
+    font-variant: small-caps;
+}
+.atdw-wls-page h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.atdw-wls-page h3
+{
+    font-size: 1.3em;
+}
+.atdw-wls-page h4
+{
+    font-size: 1.1em;
+    margin: 0.3em 0;
+    color: #579bcc; 
+}
+.atdw-wls-page h5, h6
+{
+    font-size: 1em;
+}
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+.atdw-wls-page .page-container
+{
+    text-align: left;
+    margin: 0px auto;
+    min-width: 70em;
+    max-width: 965px;
+    background-color: #ffffff;
+}
+.atdw-wls-page .content 
+{
+    overflow: hidden;
+    padding: 1em;
+}
+.atdw-wls-page .primary-content
+{
+    margin-left: 17em;
+}
+.atdw-wls-page .col-left
+{
+    float: left;
+    width: 15.4em;
+    padding: 0 0.5%;
+}
+.atdw-wls-page .col-right
+{
+    float: right;
+    width: 16%;
+    padding: 0 0.5%;
+}
+/* HEADER
+----------------------------------------------------------*/
+.atdw-wls-page .header
+{
+    color: #636363;
+    position: relative;
+    padding: .2em .9em .5em .9em;
+    border-bottom: 0.33em solid #636363;
+}
+/* FOOTER
+----------------------------------------------------------*/
+.atdw-wls-page .footer
+{
+    color: #ffffff;
+    padding: .9em;
+    text-align: center;
+    background-color: #167196;
+}
+.atdw-wls-page .footer ul.nav
+{
+    overflow: hidden;
+}
+.atdw-wls-page .footer ul.nav li
+{
+    list-style: none;
+    display: inline;
+    padding: 0em .5em;
+}
+.atdw-wls-page .footer ul.nav li a
+{
+    color: #ffffff;
+}
+.atdw-wls-page .footer ul.nav li a:hover
+{
+    color: #cccccc;
+}
+/* SEARCH AND FILTERS
+--------------------------------------------------------------------------------------*/
+.atdw-wls-page .search .search-bar {
+    overflow: hidden;
+    padding: 5px 0px;
+    line-height: 5em;
+    vertical-align: middle;
+}
+.atdw-wls-page .search .filters {
+    overflow: hidden;
+    padding: 0px;
+    line-height: 2.6em;
+    vertical-align: middle;
+    background-color: #e6eaed;
+    padding-left: 1em; 
+}
+.atdw-wls-page .search .search-bar 
+{
+    padding-left: 230px;
+    background-color: #91a4c2;   
+    position: relative;
+    overflow: hidden; 
+}
+.atdw-wls-page .search .search-bar .search-box {
+    position: relative;
+    width: 76%;
+    overflow: hidden;
+}
+.atdw-wls-page .search .search-bar .search-box input#atdwSearchText
+{
+    font-size: 1.4em;
+    width: 96%;
+    *float: left;
+}
+.atdw-wls-page .search .search-bar a.btn 
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px 30px;
+}  
+.atdw-wls-page .search div.col 
+{
+    text-align: center;
+}
+.atdw-wls-page .search .search-bar div
+{
+    vertical-align: middle;    
+}
+.atdw-wls-page .search .filters h3 
+{
+    margin: 0;    
+}
+.atdw-wls-page .search .filters ul 
+{
+    overflow: hidden;
+    margin-left: 220px;   
+}
+.atdw-wls-page .search .filters ul li 
+{
+    background: #579bcc url('../images/filterCross.gif') no-repeat right;
+    display: inline;
+    float: left;
+    list-style: none;
+    padding: 0px 1.7em 0px 1em;
+    margin-right: 5px;
+    color: #ffffff;
+    line-height: 1.8em;
+    vertical-align: middle;
+    margin-top: 0.4em;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.atdw-wls-page .disabledResultFilter
+{
+    background-color: #cacaca !important;
+}
+.atdw-wls-page .content .filters .filter-group 
+{
+    padding: 2px 0px 0 0; 
+}
+.atdw-wls-page .content .filters .filter-group ul li 
+{
+    list-style: none;
+    padding: 2px;
+}
+/* SELECT LIST
+-----------------------------------------------------------------------*/
+.atdw-wls-page ul.select-list li{
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.atdw-wls-page ul.select-list li:hover{
+    background-color: #dde3e7;
+}
+.atdw-wls-page ul.select-list li.selected
+{
+    font-weight: bold;
+    background-color: #579bcc ! important;
+    color: #ffffff;
+    cursor:default;
+}
+/* DATE RANGES
+-----------------------------------------------------------------------*/
+.atdw-wls-page .filter-group ul.date-ranges, .atdw-wls-page .filter-group ul.types {
+    overflow: hidden;
+}
+.atdw-wls-page .filter-group ul.date-ranges li, .atdw-wls-page .filter-group ul.types li {
+    float: left;
+    width: 46%;
+    margin-right: 1%;
+    margin-bottom: 1px;
+}
+/* TAGS
+-----------------------------------------------------------------------*/
+.atdw-wls-page .content .filters .tags ul {
+    position: relative;
+    display: block;
+}
+.atdw-wls-page .content .filters .tags ul li {
+    position: relative;
+}
+.atdw-wls-page .content .filters .tags ul li .show-hide {
+    cursor: pointer;
+    display: block;
+    width: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #dde3e7;
+}
+.atdw-wls-page .content .filters .tags ul li ul {
+    margin-left: 14px;
+    height: auto;
+    display: none;
+}
+/* BUTTONS
+-----------------------------------------------------------------------*/
+.atdw-wls-page a.btn {
+    color: #636363;
+    background: transparent url('../images/btn-bg.jpg') repeat-x;
+    border: 2px solid #a6a6a6;
+    line-height: 27px;
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+.atdw-wls-page a.btn-small{
+    line-height: 20px;
+    font-size: 1.0em;
+    width:80%;
+    margin:auto;
+    margin-top:10px;
+}
+.atdw-wls-page a.btn:hover{
+    text-decoration: underline;
+}
+.atdw-wls-page .hidden{
+    display:none;
+}
+.atdw-wls-page .shown {
+    display:block;
+}
+.atdw-wls-page span.clearLocation{
+    background: transparent url('../images/cross.gif') no-repeat right;
+    width: 16px;
+    height:16px;
+    display:inline-block;
+    cursor:pointer;
+}
+.atdw-wls-page span.clearLocationBlank{
+    display:none;
+}
+.atdw-wls-page span.add
+{
+    color:#579BCC;
+    cursor:pointer;
+}
+.atdw-wls-page ul.atdwAutocompleteList {
+    list-style-type:none;
+}
+.atdw-wls-page li.ui-menu-item {
+    text-align:left;
+}
+/* GENERAL
+-----------------------------------------------------------------------*/
+.atdw-wls-page .no-click {
+    cursor: default !important;
+    background-color: transparent !important;
+}
+.atdw-wls-page .uppercase {
+    text-transform:uppercase;
+}
+/* CALENDAR / DATE PICKER
+-----------------------------------------------------------------------*/
+.atdw-wls-page .ui-datepicker {
+    border: 2px solid #60717d;
+    border-bottom: none;
+    background-color: #637085;  
+    -mox-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+.atdw-wls-page .ui-datepicker  .ui-widget-header {
+    color: #ffffff;
+    font-weight: bold;
+    /*padding: 0.2em 0;*/
+    position: relative;
+    overflow: hidden;
+}
+.atdw-wls-page .ui-datepicker .ui-widget-header .ui-datepicker-title {
+    line-height: 1.5em;
+    margin: 0 2.3em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.atdw-wls-page .ui-datepicker .ui-datepicker-prev, 
+.atdw-wls-page .ui-datepicker .ui-datepicker-next {
+    height: 13px;
+    position: absolute;
+    top: 2px;
+    width: 13px;
+    text-indent: -999em;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+}
+.atdw-wls-page .ui-datepicker .ui-datepicker-prev 
+{
+    background: transparent url("../images/cal-prev.jpg") no-repeat top left;
+    left: 5px;
+}
+.atdw-wls-page .ui-datepicker .ui-datepicker-next {
+    right: 5px;
+    background: transparent url("../images/cal-next.jpg") no-repeat top left;
+}
+.atdw-wls-page .ui-datepicker table 
+{
+    border-collapse: separate;
+    background-color: #579bcc;
+    font-size: 0.9em;
+    margin: 0 0 0.2em;
+    width: 100%;
+}
+.atdw-wls-page .ui-datepicker table th {
+    text-align: center;
+    color: #ffffff;
+    padding: 0.2em 0.3em;
+}
+.atdw-wls-page .ui-datepicker table td span, 
+.atdw-wls-page .ui-datepicker table td a {
+    background-color: #E6E6E6;
+    text-align: center;
+    display: block;
+    padding: 0.2em;
+    text-decoration: none;
+    -mox-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+.atdw-wls-page .ui-datepicker table td a.ui-state-hover {
+    border: none;
+    background-color: #cccccc;
+}
+.atdw-wls-page .ui-datepicker table td.ui-datepicker-unselectable,
+.atdw-wls-page .ui-datepicker table td.ui-state-disabled
+{
+    background-color: transparent;
+}
+.atdw-wls-page .ui-datepicker table td.ui-datepicker-unselectable span,
+.atdw-wls-page .ui-datepicker table td.ui-state-disabled span {
+    background-color: #8ab0cc;
+    border: none;
+}
+.atdw-wls-page .ui-datepicker table td.ui-state-highlight a {
+    background-color: #637085;
+    color: #ffffff;
+    border: none;
+}
+
+
+/* AUTO COMPLETE LIST 
+-----------------------------------------------------------------------*/
+.ui-autocomplete { position: absolute; cursor: default; }	
+/* workarounds */
+* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+.ui-menu {
+	list-style:none;
+	padding: 2px;
+	margin: 0;
+	display:block;
+	float: left;
+}
+.ui-menu .ui-menu {
+	margin-top: -3px;
+}
+.ui-menu .ui-menu-item
+{
+    list-style: none;
+	margin:0;
+	padding: 0;
+	zoom: 1;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+.ui-menu .ui-menu-item a {
+	text-decoration:none;
+	display:block;
+	padding:.2em .4em;
+	line-height:1.5;
+	zoom:1;
+    min-width: 10em;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	margin: -1px;
+}
+.ui-autocomplete { 
+    height: 200px; 
+    overflow-y: scroll; 
+    overflow-x: hidden;
+}
+ul.ui-widget-content {
+    border: 1px solid #C3C3C3;
+    background-color: #ffffff;
+}
+.ui-autocomplete .ui-state-hover, .ui-autocomplete .ui-widget-content .ui-state-hover, .ui-autocomplete .ui-widget-header .ui-state-hover, 
+.ui-autocomplete .ui-state-focus, .ui-autocomplete .ui-widget-content .ui-state-focus, .ui-autocomplete .ui-widget-header .ui-state-focus 
+{ 
+    border: 1px solid #C3C3C3;
+    cursor:pointer; 
+    background-color: #dde3e7;
+    font-weight: normal; 
+}  
+.ui-autocomplete .ui-state-hover a, 
+.ui-autocomplete .ui-state-hover a:hover 
+{ 
+    text-decoration: none;
+}
