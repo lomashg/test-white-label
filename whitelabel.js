@@ -10,7 +10,7 @@
     var apiKey = 'DM_DEFAULT_API_KEY_0001';
 
     // TODO: Update with your url base
-    var urlBase = 'http://localhost:8081/';
+    var urlBase = 'http://snagi.github.io/test-white-label/';
     var searchURL = 'search.htm';
     var eventURL = 'event.htm';
 
