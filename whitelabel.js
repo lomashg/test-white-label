@@ -7,7 +7,7 @@
 
     // TODO: Update with your apiKey
     //var apiKey = '41b0389d-7461-44d4-ae1b-e49ac3f53b53';
-    var apiKey = 'DM_DEFAULT_API_KEY_0001';
+    var apiKey = 'ac523192c43e44909e1a7594affa51e0';
 
     // TODO: Update with your url base
     var urlBase = 'http://snagi.github.io/test-white-label/';
