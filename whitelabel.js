@@ -44,7 +44,7 @@
     **********************************/
 
     var web_service_url = 'http://atlas.atdw-online.com.au/api/';
-    var assets_url = 'http://snagi.github.io/test-white-label';
+    var assets_url = 'http://www.atdw-online.com.au/assets';
     var wlsDir = assets_url + '/wls/';
 
     function main() {
