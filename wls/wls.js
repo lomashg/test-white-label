@@ -10521,7 +10521,7 @@ eg. // ATDW modification - consistent calendar display across months of varied l
         }
 
         // force my and at to have valid horizontal and veritcal positions
-        // if a value is missing or invalid, it will be converted to center 
+        // if a value is missing or invalid, it will be converted to center
         $.each(["my", "at"], function () {
             var pos = (options[this] || "").split(" ");
             if (pos.length === 1) {
@@ -11220,7 +11220,7 @@ eg. // ATDW modification - consistent calendar display across months of varied l
 
 /*
 * jQuery UI Menu (not officially released)
-* 
+*
 * This widget isn't yet finished and the API is subject to change. We plan to finish
 * it for the next release. You're welcome to give it a try anyway and give us feedback,
 * as long as you're okay with migrating your code later on. We can help with that, too.
@@ -12032,7 +12032,7 @@ eg. // ATDW modification - consistent calendar display across months of varied l
         },
 
         /* Pop-up the date picker for a given input field.
-        If false returned from beforeShow event handler do not show. 
+        If false returned from beforeShow event handler do not show.
         @param  input  element - the input field attached to the date picker or
         event - if triggered by focus */
         _showDatepicker: function (input) {
@@ -12142,7 +12142,7 @@ eg. // ATDW modification - consistent calendar display across months of varied l
             // this breaks the change event in IE
 				inst.input.is(':visible') && !inst.input.is(':disabled') && inst.input[0] != document.activeElement)
                 inst.input.focus();
-            // deffered render of the years select (to avoid flashes on Firefox) 
+            // deffered render of the years select (to avoid flashes on Firefox)
             if (inst.yearshtml) {
                 var origyearshtml = inst.yearshtml;
                 setTimeout(function () {
@@ -13263,7 +13263,7 @@ eg. // ATDW modification - consistent calendar display across months of varied l
 /*
 * MultiDatesPicker v1.6.1
 * http://multidatespickr.sourceforge.net/
-* 
+*
 * Copyright 2011, Luca Lauretta
 * Dual licensed under the MIT or GPL version 2 licenses.
 */
@@ -13444,9 +13444,9 @@ eg. // ATDW modification - consistent calendar display across months of varied l
             compareDates: function (date1, date2) {
                 date1 = dateConvert.call(this, date1);
                 date2 = dateConvert.call(this, date2);
-                // return > 0 means date1 is later than date2 
-                // return == 0 means date1 is the same day as date2 
-                // return < 0 means date1 is earlier than date2 
+                // return > 0 means date1 is later than date2
+                // return == 0 means date1 is the same day as date2
+                // return < 0 means date1 is earlier than date2
                 var diff = date1.getFullYear() - date2.getFullYear();
                 if (!diff) {
                     diff = date1.getMonth() - date2.getMonth();
@@ -13631,7 +13631,7 @@ eg. // ATDW modification - consistent calendar display across months of varied l
                             case 'adjustRangeToDisabled':
                                 this.multiDatesPicker[option] = options[option];
                                 break;
-                            //default: $.error('Option ' + option + ' ignored for mode "'.options.mode.'".'); 
+                            //default: $.error('Option ' + option + ' ignored for mode "'.options.mode.'".');
                         }
                         break;
                     case 'daysRange':
@@ -13645,7 +13645,7 @@ eg. // ATDW modification - consistent calendar display across months of varied l
                             case 'adjustRangeToDisabled':
                                 this.multiDatesPicker[option] = options[option];
                                 break;
-                            //default: $.error('Option ' + option + ' does not exist for setMode on jQuery.multiDatesPicker'); 
+                            //default: $.error('Option ' + option + ' does not exist for setMode on jQuery.multiDatesPicker');
                         }
                         if (mandatory > 0) $.error('Some mandatory options not specified!');
                         break;
@@ -14753,12 +14753,12 @@ if (!Array.isArray) {
 
     Date.prototype.outputForService = function () {
         var d = getDateForOutput(this);
-        return d.year + d.month + d.date;                
+        return d.year + d.month + d.date;
     };
 
     Date.prototype.outputForDatePicker = function () {
         var d = getDateForOutput(this);
-        return d.year  + "-" +  d.month  + "-" + d.date;    
+        return d.year  + "-" +  d.month  + "-" + d.date;
     };
 
     Date.prototype.outputForPrinting = function () {
@@ -14810,8 +14810,10 @@ window.atdw.myevents.distribution = window.atdw.myevents.distribution || (functi
     // call this to initialise the distribution API
     // sets the web service URL to call for server-client interaction
     distribution.setBaseUrl = function (base) {
-        //distribution.webServiceBaseUrl = base + '/DistributionService/MyEventsService';
         distribution.webServiceBaseUrl = base + '/myevents';
+    };
+    distribution.setAssetsUrl = function (base) {
+        distribution.webAssetsUrl = base + '/assets/wls/';
     };
 
     // performs an event search using the specified parameters
@@ -14819,7 +14821,7 @@ window.atdw.myevents.distribution = window.atdw.myevents.distribution || (functi
     // arDates: [{start: startDate, days: numberOfDays}]
     // arLocations: [location, location] OR { regions: [], councils: [], postcodes: [], venues: [] }
     // objLocRestrictions: { councils: [], postcodes: [], regions: [] } (other fields aren't used)
-    // result is either "success", "empty", or "error", and response is either an array of event listings, nothing (if there are no search results), 
+    // result is either "success", "empty", or "error", and response is either an array of event listings, nothing (if there are no search results),
     // or the error message from the service
     // this object is passed on to a printSearchOutput(response) function which should format the output appropriately
     // eg. {result: "success", response: [... {event} ...], resultcount: { TotalMatches: response.TotalMatches, PageNumber: intPageNumber, ResultsPerPage: intResultsPerPage }};
@@ -15057,7 +15059,7 @@ window.atdw.myevents.distribution = window.atdw.myevents.distribution || (functi
     };
 
     // gets a list of regions for a specified STO
-    // returns: an array of regions to the callback provided 
+    // returns: an array of regions to the callback provided
     distribution.getRegions = function (callback, apiKey, state) {
         var url = distribution.webServiceBaseUrl + '/Regions?';
 
@@ -15478,7 +15480,7 @@ window.atdw.cache = window.atdw.cache || function () {
                             if ($(prevInput).attr('disabled') == 'disabled') {
                                 $('li span.add').show();
                             }
-                            
+
                             // call select item call back
                             selectItemCallBack();
                         });
@@ -15489,7 +15491,7 @@ window.atdw.cache = window.atdw.cache || function () {
                         }
 
                         $(this).attr('disabled', 'disabled');
-                        
+
                         // call select item call back
                         selectItemCallBack();
                     },
@@ -15529,7 +15531,7 @@ window.atdw.cache = window.atdw.cache || function () {
                             if ($(prevInput).attr('disabled') == 'disabled') {
                                 $('li span.add').show();
                             }
-                            
+
                             // call select item call back
                             selectItemCallBack();
                         });
@@ -15541,7 +15543,7 @@ window.atdw.cache = window.atdw.cache || function () {
                         }
 
                         $(this).attr('disabled', 'disabled');
-                        
+
                         // call select item call back
                         selectItemCallBack();
                     }
@@ -15610,8 +15612,8 @@ window.atdw.cache = window.atdw.cache || function () {
             $(listClass + ' li').live('click',function () {
                 $(thisList).find('li').removeClass('selected');
                 $(this).addClass('selected');
-                $('div.atdw-multidatepicker').each(function () { 
-                    $(this).updateSelectedDates(); 
+                $('div.atdw-multidatepicker').each(function () {
+                    $(this).updateSelectedDates();
                     $(this).displaySelectedList(this);
                     $(this).datepicker('setDate', new Date()); // reset the calendar to show this month again. TODO: if (eg.) "next week" is selected and that's all in the next month, show the next month.
                 });
@@ -15627,7 +15629,7 @@ window.atdw.cache = window.atdw.cache || function () {
 //Place GMap Markers
 (function ($) {
     $.fn.atdwGMap = function (atdwoptions, gmapoptions) {
-       
+
         return this.each(function () {
             var d = atdwoptions;
 
@@ -15646,7 +15648,7 @@ window.atdw.cache = window.atdw.cache || function () {
             var latlngArray = [];
             var venuesLength = d.venues.length;
             var latLngBounds = new google.maps.LatLngBounds();
-            
+
             var infowindow = new google.maps.InfoWindow();
 
             for (var i = 0; i < venuesLength; i++) {
@@ -15668,7 +15670,7 @@ window.atdw.cache = window.atdw.cache || function () {
 
             map.fitBounds(latLngBounds);
         });
-        
+
         function addMarker(map, latlng, venueName, infowindow, infoMessage) {
             var marker = new google.maps.Marker({
                 position:new google.maps.LatLng(latlng.lat(), latlng.lng()),
@@ -15725,7 +15727,7 @@ window.atdw.cache = window.atdw.cache || function () {
 */
 (function ($) {
     $.fn.atdwCollapsibleList = function (options) {
-        
+
         var defaults = {
             selectChildrenOnParentSelected : true,
             selectParentOnChildSelected : true,
@@ -15741,7 +15743,7 @@ window.atdw.cache = window.atdw.cache || function () {
             var o = options;
             //add parent list class so we can style
             $(this).children('li').each(function() {
-                
+
                 var levelOneCheckBox = $(this).children('input[type=checkbox]');
                 var levelTwoCheckBoxes = $(this).find('ul li input[type=checkbox]');
                 var levelTwoCheckBoxChecked = $(this).find('ul li input[type=checkbox]').is(':checked');
@@ -15761,7 +15763,7 @@ window.atdw.cache = window.atdw.cache || function () {
                 if(levelTwoCheckBoxes.length > 0) {
                     $(this).addClass('parent-list');
                     $(this).append('<span class=\"show-hide btn btn-default btn-xs\">' + ($(childList).is(':visible') ? o.hideText : o.showText) + '</span>');
-                    
+
                     //Add show animation
                     $(this).children('span').click(function() {
                         if(!$(childList).is(':visible')) {
@@ -15773,9 +15775,9 @@ window.atdw.cache = window.atdw.cache || function () {
                                 $(childList).slideUp('fast');
                                 $(this).text(o.showText);
                             }
-                        }                      
+                        }
                     });
-                    
+
                     //Select all the children when the parent is clicked
                     if(o.selectChildrenOnParentSelected) {
                         $(this).children('input[type=checkbox], label').click(function() {
@@ -15795,7 +15797,7 @@ window.atdw.cache = window.atdw.cache || function () {
                             $(levelOneCheckBox).prop('checked', checkParent);
                         });
                     }
-                    
+
                 }
             });
         });
@@ -15815,10 +15817,10 @@ window.atdw.cache = window.atdw.cache || function () {
             , displayListSelector: options.displayListSelector
             , displayList: options.displayList
         };
-        
+
         // set callback variable - gets called on select date
         var selectDateCallback = options.selectDateCallback;
-        
+
         options = $.extend(defaults, options);
 
         $.fn.clearCalendar = function () {
@@ -16034,7 +16036,7 @@ window.atdw.myevents.event = window.atdw.myevents.event || (function () {
         return "<" + element + className + ">" + text + "</" + element + ">";
     };
 
-    //Sets the event date 
+    //Sets the event date
     function setEventDate(date) {
         if (date && date != "")
             eventDate = atdw.helpers.dateFromWebService(date);
@@ -16214,7 +16216,7 @@ window.atdw.myevents.event = window.atdw.myevents.event || (function () {
             websiteHtml += '<a href="http://' + event.Website.replace('http://', '') + '" title="' + event.Website + '" target="_blank">' + event.Website + '</a>';
             contactHtml += wrap(websiteHtml, 'div', 'website');
         }
-        //Email Html 
+        //Email Html
         if (event.Email) {
             if (myevents.contactEmailLabel)
                 emailHtml = wrap(myevents.contactEmailLabel, 'label', labelClass);
@@ -16372,7 +16374,7 @@ window.atdw.myevents.event = window.atdw.myevents.event || (function () {
     * PUBLIC FUNCTIONS
     ------------------------------------------------------------------------------*/
     myevents.setBaseUrl = function (base) {
-        myevents.resourceURL = base + '/_resources/' + STO + '/wls/';
+        myevents.resourceURL = base + '/wls/';
     };
 
     myevents.start = function (options) {
@@ -16434,7 +16436,7 @@ window.atdw.myevents.search = window.atdw.myevents.search || (function () {
         regions: 'regions'
     };
     /*
-    * PUBLIC PROPERTIES - DEFAULT VALUES 
+    * PUBLIC PROPERTIES - DEFAULT VALUES
     ------------------------------------------------------------------------------*/
 
     // if you change these default values you should update the readme.txt as well
@@ -16480,9 +16482,9 @@ window.atdw.myevents.search = window.atdw.myevents.search || (function () {
     search.io.textSelectDisabled = '.atdw-tags, .date-ranges, .types, .result-per-page, .paging';
     search.io.loadingIndicator = 'atdw-loading-spinner';
     search.io.filterGroupButtons = '.filter-group.buttons';
-    
+
     search.io.scrollToTopSelector = '.atdw-wls-page';
-    
+
     search.settings = {};
 
     // ensure there is an element with selector search.io.resultsPerPage that has this value
@@ -16533,7 +16535,7 @@ window.atdw.myevents.search = window.atdw.myevents.search || (function () {
 
     // intialise
     search.setBaseUrl = function (base) {
-        search.settings.resourceURL = base + '/_resources/' + STO + '/wls/';
+        search.settings.resourceURL = base + '/wls/';
     };
 
     // display loading indicators in areas that will be loaded asyncronously
@@ -16579,7 +16581,7 @@ window.atdw.myevents.search = window.atdw.myevents.search || (function () {
                 $(search.io.locationsDivID).show();
                 $(search.io.regionsDivID).hide();
             }
-            
+
             search.initialiseMultiDatePicker();
             search.getEventsFromCache(); // start searching!
         });
@@ -17753,7 +17755,7 @@ window.atdw.myevents.search = window.atdw.myevents.search || (function () {
 
     function setUpdateEventSearch() {
         if (search.settings.autoUpdateFilters === true) {
-            // clear timeout 
+            // clear timeout
             clearTimeout(EVENT_SEARCH_FN);
 
             // save new widget config vals

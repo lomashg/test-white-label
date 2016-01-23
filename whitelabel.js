@@ -43,10 +43,9 @@
     ADVANCED USERS ONLY BELOW THIS LINE
     **********************************/
 
-    //var web_service_url = 'http://www.eventsvictoria.com/';
     var web_service_url = 'http://atlas.atdw-online.com.au/api/';
-    //var wlsDir = web_service_url + '/Scripts/atdw-dist-min/V2-1/Default/wls/';
-    var wlsDir = urlBase; //'http://localhost:8081/';
+    var assets_url = 'http://snagi.github.io/test-white-label';
+    var wlsDir = assets_url + '/wls/';
 
     function main() {
 
@@ -68,6 +67,7 @@
 
     function configure() {
         window.atdw.myevents.distribution.setBaseUrl(web_service_url);
+        window.atdw.myevents.distribution.setAssetsUrl(assets_url);
 
         if (isSearchPage()) {
             if (!validateMarkup()) {
@@ -75,7 +75,7 @@
                 return;
             }
             window.atdw.myevents.search.settings.apiKey = apiKey;
-            window.atdw.myevents.search.setBaseUrl(web_service_url);
+            window.atdw.myevents.search.setBaseUrl(assets_url);
             window.atdw.myevents.search.settings.locations = locations;
             window.atdw.myevents.search.settings.eventPageURL = urlBase + eventURL;
             window.atdw.myevents.search.settings.autoUpdateFilters = autoUpdateFilters;
@@ -90,7 +90,7 @@
         } else if (isEventPage()) {
 
             window.atdw.myevents.event.apiKey = apiKey;
-            window.atdw.myevents.event.setBaseUrl(web_service_url);
+            window.atdw.myevents.event.setBaseUrl(assets_url);
             window.atdw.myevents.event.searchPageURL = urlBase + searchURL;
             eventSettings.defaultDateRange = defaultDateRange;
             window.atdw.myevents.event.start(eventSettings);
