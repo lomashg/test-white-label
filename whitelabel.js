@@ -6,8 +6,7 @@
     **********************************/
 
     // TODO: Update with your apiKey
-    //var apiKey = '41b0389d-7461-44d4-ae1b-e49ac3f53b53';
-    var apiKey = 'ac523192c43e44909e1a7594affa51e0';
+    var apiKey = 'ad9ccdd9188f4983af9c760a0dce4258';
 
     // TODO: Update with your url base
     var urlBase = 'http://snagi.github.io/test-white-label/';
@@ -43,8 +42,8 @@
     ADVANCED USERS ONLY BELOW THIS LINE
     **********************************/
 
-    var web_service_url = 'http://atlas.atdw-online.com.au/api/';
-    var assets_url = 'http://www.atdw-online.com.au/assets';
+    var web_service_url = 'https://atlas.atdw-online.com.au/api/';
+    var assets_url = 'https://www.atdw-online.com.au/assets';
     var wlsDir = assets_url + '/wls/';
 
     function main() {
