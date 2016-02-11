@@ -40,8 +40,8 @@
     ADVANCED USERS ONLY BELOW THIS LINE
     **********************************/
 
-    var web_service_url = 'https://atlas.sapient-atdw.com.au/api/';
-    var assets_url = 'https://www.sapient-atdw.com.au/assets';
+    var web_service_url = 'https://atlas.atdw-online.com.au/api';
+    var assets_url = 'https://www.atdw-online.com.au/assets';
     var wlsDir = assets_url + '/wls/';
 
     function main() {
