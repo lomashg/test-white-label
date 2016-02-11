@@ -22,8 +22,6 @@
 
     var usernames = [];
 
-    var categories = [];
-
     var defaultDateRange = "All";
 
     var eventSettings = {};
@@ -43,7 +41,7 @@
     **********************************/
 
     var web_service_url = 'https://atlas.atdw-online.com.au/api/';
-    var assets_url = 'https://www.atdw-online.com.au/assets';
+    var assets_url = 'https://www.sapient-atdw.com.au/assets';
     var wlsDir = assets_url + '/wls/';
 
     function main() {
@@ -80,7 +78,7 @@
             window.atdw.myevents.search.settings.autoUpdateFilters = autoUpdateFilters;
             searchSettings.defaultDateRange = defaultDateRange;
             searchSettings.username = usernames;
-            searchSettings.categories = categories;
+            searchSettings.categories = [];
 
             // call toggle buttons
             window.atdw.myevents.search.toggleUpdateButtons();
